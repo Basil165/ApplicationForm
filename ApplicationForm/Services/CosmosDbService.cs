@@ -23,6 +23,11 @@ namespace ApplicationForm.Services
             await _container.CreateItemAsync(formData, new PartitionKey(formData.Id));
         }
 
+        public async Task UpdateFormDataAsync(FormData formData)
+        {
+            await _container.ReplaceItemAsync(formData, formData.Id, new PartitionKey(formData.Id));
+        }
+
         public async Task<FormData> GetFormDataAsync(string id)
         {
             try

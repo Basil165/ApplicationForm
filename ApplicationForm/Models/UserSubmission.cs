@@ -13,9 +13,9 @@
         public string? Gender { get; set; }
         public string? AboutYourself { get; set; }
         public Boolean rejectedUk { get; set; }
-        public List<string> multipleChoices { get; set; }
+        public List<string>? multipleChoices { get; set; }
         public string? experience { get; set; }
         public DateTime movedUk { get; set; }
-        public List<string> YearOfGraduation { get; set; }
+        public List<string>? YearOfGraduation { get; set; }
     }
 }
